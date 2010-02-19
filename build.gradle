@@ -1,0 +1,67 @@
+//usePlugin 'war'
+//usePlugin 'jetty'
+usePlugin 'java'
+usePlugin 'eclipse'
+
+group = "hibsearch"
+version = "1.0"
+
+repositories {
+	flatDir(dirs: "$rootDir/lib")
+	mavenCentral()
+	
+	//spring source maven repos
+	mavenRepo urls: ["http://repository.springsource.com/maven/bundles/release", "http://repository.springsource.com/maven/bundles/external", "http://repository.springsource.com/maven/libraries/release", "http://repository.springsource.com/maven/libraries/external"]
+}
+
+dependencies {
+	compile "org.hibernate:hibernate-search:3.1.0.GA"	
+	compile "org.hibernate:hibernate-validator:3.1.0.GA"
+	compile "javax.validation:com.springsource.javax.validation:1.0.0.GA"
+	compile "log4j:log4j:1.2.15@jar"
+	compile "org.slf4j:slf4j-log4j12:1.5.2@jar"
+	compile "org.hibernate:hibernate-annotations:3.4.0.GA"
+	compile "javassist:javassist:3.4.GA@jar"
+	//compile "org.hibernate:hiberate"
+	runtime ":jconn2:1.0"
+	//compile group: 'log4j', name: 'log4j', version: '1.2.15', transitive: false
+	//providedCompile "javax.servlet:servlet-api:2.5"	
+}
+
+task initProject(description: 'Initialize project directory structure') << {
+  //Default package to be created in each src dir
+  def defaultPackage = "net/berinle/hibsearch"
+
+  ['java', 'resources'].each {
+	convention.sourceSets.all."${it}".srcDirs*.each { dir ->
+	  def newDir = new File(dir, defaultPackage)
+	  logger.info "Creating directory $newDir"
+	  newDir.mkdirs()
+	}
+  }
+
+  //create webapp directory
+  //def webappDir = "$rootDir/src/main/webapp"
+  //file(webappDir).mkdir()
+
+  //Create the WEB-INF director
+  //file(webappDir + "/WEB-INF").mkdir()
+
+  //Create the META-INF directory
+  //file(webappDir + "/META-INF").mkdir()
+}
+
+task ide << {
+  def libDir = file('lib')
+  ant.delete(dir: libDir)
+  copy {
+	from configurations.testRuntime
+	into libDir
+  }
+}
+
+task copyRuntimeDependencies(dependsOn: configurations.runtime.buildArtifacts, type: Copy) {
+	into('build/output/lib')
+	from configurations.runtime
+	from configurations.runtime.allArtifacts*.file
+}

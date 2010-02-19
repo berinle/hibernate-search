@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<classpath>
+  <classpathentry kind="src" path="src/main/java"/>
+  <classpathentry kind="src" path="src/main/resources"/>
+  <classpathentry kind="output" path="build/classes/main"/>
+  <classpathentry kind="src" path="src/test/java" output="build/classes/test"/>
+  <classpathentry kind="src" path="src/test/resources" output="build/classes/test"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/antlr/antlr/jars/antlr-2.7.6.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/commons-collections/commons-collections/jars/commons-collections-3.1.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/javassist/javassist/jars/javassist-3.4.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/javax.transaction/jta/jars/jta-1.1.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/javax.validation/com.springsource.javax.validation/jars/com.springsource.javax.validation-1.0.0.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/log4j/log4j/jars/log4j-1.2.15.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.apache.lucene/lucene-core/jars/lucene-core-2.4.0.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.hibernate/ejb3-persistence/jars/ejb3-persistence-1.0.2.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.hibernate/hibernate-annotations/jars/hibernate-annotations-3.4.0.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.hibernate/hibernate-commons-annotations/jars/hibernate-commons-annotations-3.1.0.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.hibernate/hibernate-core/jars/hibernate-core-3.3.1.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.hibernate/hibernate-search/jars/hibernate-search-3.1.0.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-3.1.0.GA.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.4.2.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.5.2.jar"/>
+  <classpathentry kind="lib" path="C:/Documents and Settings/berinle/.gradle/cache/xml-apis/xml-apis/jars/xml-apis-1.0.b2.jar"/>
+  <classpathentry kind="lib" path="D:/gitrepos/hibernate-search/lib/jconn2-1.0.jar"/>
+</classpath>

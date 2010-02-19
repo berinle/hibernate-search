@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="show_sql">true</property>
+		
+		<property name="connection.driver_class">com.sybase.jdbc2.jdbc.SybDataSource</property>
+		<property name="connection.username">yourusername</property>
+		<property name="connection.password">yourpass</property>
+		<property name="connection.url">jdbc:sybase:Tds:bann:2025/inquiry</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.SybaseDialect</property>
+		
+		<!-- Hibernate Search configuration -->
+		<property name="hibernate.search.default.indexBase">
+			/users/application/indexes
+		</property>
+				
+		<mapping class="net.berinle.hibsearch.model.Contact"/>
+	</session-factory>
+</hibernate-configuration>
